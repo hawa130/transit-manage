@@ -1,81 +1,19 @@
-# electron-vite-react
+# Transit Manage
 
-[![awesome-vite](https://awesome.re/mentioned-badge.svg)](https://github.com/vitejs/awesome-vite)
-![GitHub stars](https://img.shields.io/github/stars/caoxiemeihao/vite-react-electron?color=fa6470)
-![GitHub issues](https://img.shields.io/github/issues/caoxiemeihao/vite-react-electron?color=d8b22d)
-![GitHub license](https://img.shields.io/github/license/caoxiemeihao/vite-react-electron)
-[![Required Node.JS >= 14.18.0 || >=16.0.0](https://img.shields.io/static/v1?label=node&message=14.18.0%20||%20%3E=16.0.0&logo=node.js&color=3f893e)](https://nodejs.org/about/releases)
+XDU 数据库系统大作业。后端数据库使用 PostgreSQL，前端使用 Electron + React。
 
-English | [简体中文](README.zh-CN.md)
+由于作业未要求，该系统并未做明确的权限划分，不过自己是不可以编辑自己的违章记录的哦。
 
-## 👀 Overview
+## 功能概览
+1. 录入司机信息
+2. 录入车辆信息
+3. 录入违章信息
+4. 查询车队下的司机
+5. 查询司机的违章
+6. 车队违章统计
 
-📦 Ready out of the box  
-🎯 Based on the official [template-react-ts](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts), project structure will be familiar to you  
-🌱 Easily extendable and customizable  
-💪 Supports Node.js API in the renderer process  
-🔩 Supports C/C++ native addons  
-🐞 Debugger configuration included  
-🖥 Easy to implement multiple windows  
-
-## 🛫 Quick start
-
-```sh
-npm create electron-vite
-```
-
-![electron-vite-react.gif](https://github.com/electron-vite/electron-vite-react/blob/main/public/electron-vite-react.gif?raw=true)
-
-## 🐞 Debug
-
-![electron-vite-react-debug.gif](https://github.com/electron-vite/electron-vite-react/blob/main/public/electron-vite-react-debug.gif?raw=true)
-
-## 📂 Directory structure
-
-Familiar React application structure, just with `electron` folder on the top :wink:  
-*Files in this folder will be separated from your React application and built into `dist/electron`*  
-
-```tree
-├── electron                  Electron-related code
-│   ├── main                  Main-process source code
-│   ├── preload               Preload-scripts source code
-│   └── resources             Resources for the production build
-│       ├── icon.icns             Icon for the application on macOS
-│       ├── icon.ico              Icon for the application
-│       ├── installerIcon.ico     Icon for the application installer
-│       ├── uninstallerIcon.ico   Icon for the application uninstaller
-|       └── iconset               
-|           └── 256x256.png       Icon for the application on Linux
-│
-├── release                   Generated after production build, contains executables
-│   └── {version}
-│       ├── {os}-unpacked     Contains unpacked application executable
-│       └── Setup.{ext}       Installer for the application
-│
-├── public                    Static assets
-└── src                       Renderer source code, your React application
-```
-
-## 🚨 Be aware
-
-This template integrates Node.js API to the renderer process by default. If you want to follow **Electron Security Concerns** you might want to disable this feature. You will have to expose needed API by yourself.  
-
-To get started, remove the option as shown below. This will [modify the Vite configuration and disable this feature](https://github.com/electron-vite/vite-plugin-electron-renderer#config-presets-opinionated).
-
-```diff
-# vite.config.ts
-
-export default {
-  plugins: [
--   // Use Node.js API in the Renderer-process
--   renderer({
--     nodeIntegration: true,
--   }),
-  ],
-}
-```
-
-## ❔ FAQ
-
-- [dependencies vs devDependencies](https://github.com/electron-vite/vite-plugin-electron-renderer#dependencies-vs-devdependencies)
-- [C/C++ addons, Node.js modules - Pre-Bundling](https://github.com/electron-vite/vite-plugin-electron-renderer#dependency-pre-bundling)
+## 界面预览
+![](screenshots/登录.png)
+![](screenshots/统计.png)
+![](screenshots/员工.png)
+![](screenshots/违章.png)
